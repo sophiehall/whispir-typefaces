@@ -1,0 +1,810 @@
+/* Global styles */
+body {
+  font-family: Motivo Regular;
+}
+
+html, body {
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+.large {
+  display: block;
+}
+
+.small {
+  display: none;
+}
+
+.container {
+  padding-left: 150px;
+  padding-right: 200px;
+}
+
+/* transition in js */
+/* examples tab open, try it stays closed */
+body.examples-open .examples {
+  transform: translateX(150px);
+}
+
+body.examples-open .examples-layer {
+  left: 0;
+  transform: translateX(50px);
+  z-index: 1;
+}
+
+/* try it out tab open, examples tab must also open */
+body.try-it-open .typechecker {
+  transform: translateX(150px);
+}
+
+body.try-it-open .typechecker-layer {
+  transform: translateX(0);
+  left: 100px;
+}
+
+body.try-it-open .examples {
+  transform: translateX(150px);
+}
+
+body.try-it-open .examples-layer {
+  transform: translateX(50px);
+  left: 0;
+}
+
+@keyframes hideithack {
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hide-it-as-well .typechecker-layer span {
+  animation: hideithack 0.5s ease;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+h1.rotated-text {
+  transform-origin: left;
+  text-align: right;
+  position: fixed;
+  font-size: 24px;
+  z-index: 100;
+  padding-right: 40px;
+  width: 185px;
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.top-pad {
+  padding-top: 160px;
+}
+
+.bottom-pad {
+  padding-bottom: 160px;
+}
+
+.image-top {
+    padding-top: 40px;
+}
+
+.image-narrow {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.home h1.rotated-text {
+  transform: translate(13%, 676%) rotate(270deg);
+}
+
+.home {
+  /*   overflow-y: scroll; */
+  background-color: #111;
+  color: #fff;
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+}
+
+.header {
+  margin-top: 25vh;
+  align-items: center;
+  text-align: center;
+}
+
+h2 {
+  font-size: 114px;
+  line-height: 1.2;
+  margin-bottom: 50px;
+}
+
+h2 .capisce-display {
+  font-family: Capisce Display;
+}
+
+h2 .capisce-italic {
+  font-family: Capisce Italic;
+}
+
+h2 .motivo-bold-ext {
+  font-family: Motivo Bold Extended;
+}
+
+h3.small-caps {
+  font-family: Motivo Bold Extended;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #bababa;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+h3.dark {
+    color: #212121;
+}
+
+h3.white {
+  color: #fff;
+}
+
+.dark-bg {
+  background-color: #212121;
+}
+
+.coral-bg {
+  background-color: #FF7175;
+}
+
+.green-bg {
+  background-color: #00A19B;  
+}
+
+.lg-bg {
+  background-color: #f4f4f4;
+}
+
+.white-bg {
+  background-color: #FFf;
+}
+
+.full-w-image {
+    padding-left: 50px;
+    padding-right: 100px;
+    background-color: currentColor;
+}
+
+.intro-layer {
+  background-color: #111;
+  width: 50px;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+}
+
+.typefaces-intro {
+  color: #fff;
+  width: 100%;
+  font-size: 28px;
+  line-height: 1.4;
+  bottom: 0;
+  position: relative;
+}
+
+.customHR {
+  width: auto;
+  font-size: 2px;
+  color: #ffffff;
+  line-height: 2px;
+  background-color: #fff;
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+
+.typefaces-intro p {
+  margin-bottom: 50px;
+}
+
+button.download-specimen {
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  font-family: Motivo Bold Extended;
+  background: none;
+  text-align: center;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  outline: none;
+  padding: 12px 30px;
+  vertical-align: middle;
+  line-height: 1.5;
+}
+
+.home section img {
+  width: 100%;
+}
+
+button:hover {
+  color: #111;
+  background-color: #fff;
+}
+
+.examples {
+  overflow-y: scroll;
+  /*     padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+  :content-box: ; /* So the width will be 100% + 17px */
+  background-color: #fff;
+  color: #111;
+  position: fixed;
+  height: 100vh;
+  min-width: 100vw;
+  left: -100px;
+  transform: translateX(100%);
+  text-rendering: optimizeLegibility;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+}
+
+.examples-layer {
+  cursor: pointer;
+  z-index: 1;
+  position: fixed;
+  min-width: 100vw;
+  left: -100px;
+  transform: translateX(100%);
+  text-rendering: optimizeLegibility;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+}
+
+.examples-layer span {
+  background-color: #fff;
+  cursor: pointer;
+  height: 100vh;
+  position: fixed;
+  width: 50px;
+  left: 0;
+  top: 0;
+}
+
+h1.rotated-text.examples-heading {
+  color: #111;
+  transform: translate(12%, 676%) rotate(270deg);
+}
+
+section.examples-intro {
+  background-color: #fff;
+  left: 100px;
+  right: 200px;
+  position: absolute;
+  z-index: 1;
+  border-bottom: solid 2px #111;
+  padding-bottom: 120px;
+  margin-bottom: 50px;
+}
+
+.examples-intro p {
+  bottom: 50px;
+  padding-top: 25%;
+  max-width: 80%;
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+.examples-intro .scroll-down {
+  position: absolute;
+  float: right;
+  right: 0;
+  bottom: 120px;
+}
+
+section.image-grid {
+  min-height: 100vh;
+/*  position: absolute;*/
+  position: relative;
+  margin: auto;
+  top: 90vh;
+  background-color: #fff;
+  width: 100vw;
+  padding-right: 190px;
+  left: 0;
+  right: 0;
+
+  padding-left: 90px;
+  padding-bottom: 120px;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+}
+
+section.image-grid img {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Typechecker Slide*/
+.typechecker {
+  cursor: auto;
+
+  font-family: Motivo Regular;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  background-color: #1515FF;
+  color: #fff;
+  /*   min-height: 100vh; */
+  min-width: 100vw;
+  z-index: 2;
+  transform: translateX(100%);
+  left: -50px;
+  text-rendering: optimizeLegibility;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  
+  height: 100vh;
+/*   max-height: 100vh; */
+  
+   overflow-x: scroll;
+/*    overflow: hidden; */
+  
+/*    position: absolute; */
+   position: fixed;
+}
+
+/* .typechecker h1 {
+  color: #fff;
+  transform: translate(13%, 573%) rotate(270deg);
+} */
+
+/* .typechecker-layer {
+  background-color: #1515FF;
+  width: 50px;
+  height: 100vh;
+  position: fixed;
+  z-index: 5;
+} */
+
+.typechecker-layer {
+  cursor: pointer;
+  background-color: #1515FF;
+  z-index: 3;
+  position: fixed;
+  min-width: 100vw;
+  left: -50px;
+  transform: translateX(100%);
+  text-rendering: optimizeLegibility;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+}
+
+.typechecker-layer span {
+  background-color: #1515FF;
+  cursor: pointer;
+  height: 100vh;
+  position: absolute;
+  width: 50px;
+  left: 0;
+  top: 0;
+}
+
+h1.rotated-text.try-it-heading {
+  color: #ffffff;
+  transform: translate(13%, 676%) rotate(270deg);
+}
+
+section.typechecker-section {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+section.options {
+  margin: auto;
+  z-index: 100;
+}
+
+section.options-top {
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  top: auto;
+  width: 800px;
+  transform: translateX(-50%);
+  top: 18vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 100px;
+}
+
+section.options-bottom {
+  text-align: center;
+  position: fixed;
+  display: flex;
+  bottom: 15vh;
+  left: 50%;
+  margin: auto;
+  transform: translate(-50%, 0);
+  padding-right: 100px;
+}
+
+div.option {
+  display: flex;
+  font-size: 14px;
+}
+
+/* div.option-checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ */
+label {
+  display: block;
+}
+
+label span {
+  float: right;
+  font-style: italic;
+}
+
+.typesize-output {
+  margin-left: 10px;
+}
+
+input[type='text'] {
+  width: 100%;
+  outline: none;
+  background-color: rgba(0, 92, 255, 0);
+  color: currentColor;
+  padding: 5px;
+  border: none;
+}
+
+input[type='range'] {
+  color: #fff;
+  width: 100%;
+}
+
+select {
+  z-index: 1;
+  width: 155px;
+  text-align: left;
+  -webkit-appearance: none;
+  border-radius: 0;
+  border: none;
+  color: #fff;
+  background-color: transparent;
+  outline: none;
+  /*   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='8px' height='8px' viewBox='0 0 7 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='none' stroke-width='1' fill='#fff'  fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-rule='nonzero'%3E%3Cpolygon points='0 0 3.232 5.816 6.432 0'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+}
+
+div.option.typeface-select svg {
+  left: 145px;
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+}
+
+.random svg {
+  cursor: pointer;
+}
+
+#Page-1 g#refresh {
+  fill: currentColor;
+}
+
+.fallback {
+  display: none;
+  /* Make sure it's the same size as the SVG takes up */
+}
+.no-svg .fallback {
+  background-image: url(random.svg);
+}
+
+.typeface-select {
+  display: flex;
+}
+
+.sample-text {
+  cursor: pointer;
+  user-select: none;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 20px 220px 0px 120px;
+  width: 100%;
+  height: 100vh;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  position: absolute;
+  background-color: rgb(0, 92, 255);
+  color: rgb(255, 255, 255);
+  text-align: center;
+
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: normal;
+  text-rendering: optimizeLegibility;
+
+  font-size: 65px;
+  background: none;
+  border: none;
+  outline: none;
+  overflow: hidden;
+}
+
+div.sample-text p.quote.long {
+  font-size: 40px;
+}
+
+div.sample-text p.quote.short {
+  font-size: 100px;
+}
+
+div.sample-text p.author {
+  font-size: 30px;
+  margin-top: 30px;
+  padding-right: 10px;
+}
+
+div.sample-text p.author.long {
+  font-size: 20px;
+}
+
+div.sample-text p.author.short {
+  font-size: 40px;
+}
+
+div.colors {
+  display: flex;
+  justify-content: center;
+}
+
+div.colors div {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 10px;
+  transition: border 0.25s;
+  padding: 5px;
+}
+
+div.colors div.selected {
+  border: 1px solid;
+  border-color: currentColor;
+}
+
+option {
+    color: #222;
+}
+
+input[type='checkbox'] {
+  color: #fff;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  outline: none;
+  transition: background-color 0.25s;
+  margin-left: 10px;
+}
+
+input[type='checkbox']:checked {
+  background-color: #fff;
+}
+
+input::placeholder {
+  color: currentColor;
+  opacity: 1;
+}
+
+div.alignment {
+  margin-top: 4px;
+  justify-content: space-between;
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+div.alignment div {
+  cursor: pointer;
+}
+
+div.line {
+  width: 15px;
+  height: 1px;
+  margin-bottom: 4px;
+  background-color: currentColor;
+}
+
+div.middle {
+  width: 10px;
+}
+
+div.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+div.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+/* ====== custom slider styling ====== */
+
+/* ====== Base Styling ====== */
+
+input[type='range'] {
+  color: inherit;
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type='range']:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type='range']::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* ====== Thumb Styling ====== */
+
+/* Special styling for WebKit/Blink */
+input[type='range']::-webkit-slider-thumb {
+  color: currentColor;
+  -webkit-appearance: none;
+  border: 1px solid currentColor;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type='range']::-moz-range-thumb {
+  border: 1px solid currentColor;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: currentColor;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type='range']::-ms-thumb {
+  border: 1px solid currentColor;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: currentColor;
+  cursor: pointer;
+}
+
+/* ====== styling the track ====== */
+input[type='range']::-webkit-slider-runnable-track {
+  color: currentColor;
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  border-radius: 0;
+  background: currentColor;
+  border-radius: 1.3px;
+}
+
+input[type='range']:focus::-webkit-slider-runnable-track {
+  background-color: currentColor;
+}
+
+input[type='range']::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background-color: currentColor;
+  border-radius: 0;
+}
+
+input[type='range']::-ms-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background-color: currentColor;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type='range']::-ms-fill-lower {
+  background-color: currentColor;
+  border: 1px solid;
+  border-radius: 0;
+}
+input[type='range']:focus::-ms-fill-lower {
+  background-color: currentColor;
+}
+input[type='range']::-ms-fill-upper {
+  background-color: currentColor;
+  border: 1px solid;
+  border-radius: 0;
+}
+input[type='range']:focus::-ms-fill-upper {
+  background-color: currentColor;
+}
