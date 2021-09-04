@@ -1,0 +1,362 @@
+/* Media Queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+/* Show on large devices only   */
+  .small {
+    display: block;
+  }
+  
+  .large {
+    display: none;
+  }
+  
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+  
+  .top-pad {
+  padding-top: 70px;
+}
+
+.bottom-pad {
+  padding-bottom: 80px;
+}
+    
+    .image-top  {
+        padding-top: 10px;
+    }
+    
+    .image-narrow {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .full-w-image {
+        width: 100%;
+    padding-left: 0;
+        padding-right: 0;
+    }
+    
+  
+  .customHR {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+  
+  /* Examples slide open */
+  body.examples-open .examples {
+    transform: translateY(0);
+    top: 40px;
+    z-index: 1;
+  }
+  /*  Examples slide open, examples layer slides up */
+  body.examples-open .examples-layer {
+    left: 0;
+    transform: translateY(0);
+    z-index: 3;
+    top: 0;
+  }
+
+  /* Try it slide open  */
+  body.try-it-open .typechecker {
+    transform: translateY(0);
+    top: 80px;
+  }
+  
+    body.try-it-open .typechecker-layer {
+    left: 0;
+    transform: translateY(0);
+    z-index: 3;
+    top: 0;
+  }
+  
+  /*  Try it slide open, examples must be open  */
+  body.try-it-open .examples {
+    transform: translateY(0);
+    top: 40px;
+    z-index: 1;
+  }
+  /* Try it slide open, examples layer must slide up */
+  body.try-it-open .examples-layer {
+    left: 0;
+    transform: translateY(0);
+    z-index: 2;
+    top: 0;
+  }
+
+  h1.rotated-text {
+    transform-origin: left;
+    text-align: left;
+    position: fixed;
+    font-size: 18px;
+    z-index: 100;
+    padding-left: 25px;
+    padding-top: 10px;
+    width: 100%;
+  }
+
+  .home h1.rotated-text {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+
+  .intro-layer {
+    background-color: #111;
+    width: 100vw;
+    height: 40px;
+    position: fixed;
+    z-index: 3;
+  }
+
+  .typefaces-intro {
+    overflow-x: scroll;
+    max-width: 100%;
+    top: 0;
+  color: #fff;
+  line-height: 1.4;
+  bottom: 0;
+  position: relative;
+    background-color: #111;
+  }
+
+  .typefaces-intro p {
+    font-size: 20px;
+  }
+  
+  h3.small-caps {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+
+  .home {
+    overflow-x: scroll;
+    background-color: #111;
+    color: #fff;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    padding-bottom: 50px;
+  }
+
+  button.download-specimen {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  
+  section.examples-intro {
+    border-bottom: 1.7px solid #212121;
+  }
+
+  /*  Examples Slide  */
+  .examples {
+    overflow-x: scroll;
+    background-color: #fff;
+    color: #111;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    bottom: 80px;
+    left: 0;
+    transform: translateY(100%);
+    text-rendering: optimizeLegibility;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+  }
+
+  .examples-layer {
+    z-index: 3;
+    height: 40px;
+    width: 100vw;
+    background-color: #fff;
+
+    position: -webkit-sticky;
+    position: sticky;
+
+    min-width: 100vw;
+    top: 0;
+    left: 0;
+
+    transform: translateY(0);
+    text-rendering: optimizeLegibility;
+  }
+
+  .examples-layer span {
+    display: none;
+  }
+
+  section.examples-intro {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .examples-intro p {
+    max-width: 100vw;
+    font-size: 20px;
+    line-height: 1.4;
+    padding: 0;
+    margin: 0;
+  }
+
+  h1.rotated-text.examples-heading {
+    color: #111;
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  section.examples-intro {
+    left: 25px;
+    right: 25px;
+    padding-top: 20vh;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
+
+  .examples-intro .scroll-down {
+    display: none;
+  }
+
+  section.image-grid {
+    min-height: 100vh;
+    position: absolute;
+    margin-bottom: 80px;
+    padding-bottom: 40px;
+    left: 0;
+    right: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 40px;
+    top: 100vh;
+  }
+
+  section.image-grid img {
+    padding: 0 0 20px 0;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*  Typechecker Slide  */
+  .typechecker {
+    overflow-x: scroll;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    bottom: 40px;
+    left: 0;
+    transform: translateY(100%);
+    text-rendering: optimizeLegibility;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+  }
+
+  .typechecker-layer {
+    z-index: 3;
+    height: 40px;
+    width: 100vw;
+
+    position: -webkit-sticky;
+    position: sticky;
+
+/*     position: fixed; */
+    
+    min-width: 100vw;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    transform: translateY(0);
+    text-rendering: optimizeLegibility;
+  }
+
+h1.rotated-text.try-it-heading {
+    color: #ffffff;
+    transform: translate(0) rotate(0);
+}
+
+  section.options-top {
+    width: 100%;
+    padding-right: 25px;
+    padding-left: 25px;
+    top: 10vh;
+    flex-direction: inherit;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  section.options-bottom {
+    padding-right: 25px;
+    padding-left: 25px;
+    bottom: 10vh;
+  }
+
+  .edit-sample {
+    display: none;
+  }
+
+  .sample-text {
+    width: 100%;
+    padding: 25px;
+    font-size: 30px;
+    justify-content: left;
+    height: 50%;
+    text-align: left;
+  }
+
+  div.sample-text p.quote.long {
+    font-size: 20px;
+  }
+
+  div.sample-text p.quote.short {
+    font-size: 50px;
+  }
+  
+  div.sample-text p.author {
+    font-size: 20px;
+  }
+
+  div.option {
+    padding-top: 20px;
+    width: 55%;
+  }
+  
+  div.option.typeface-select {
+    width: 70%;
+  }
+  
+  div.option.typeface-select svg {
+    left: 168px;
+  }
+  
+  div.option.random {
+		width: 30%;
+    justify-content: center;
+  }
+  
+  div.option.edit {
+    width: 0;
+  }
+
+  div.alignment {
+    padding-top: 20px;
+    width: 30%;
+  }
+
+  section.image-grid {
+    padding-bottom: 0;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px to 1080px) */
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

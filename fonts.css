@@ -1,0 +1,24 @@
+@font-face {
+    font-family: Motivo Regular;
+    src: url(motivo-regular.woff2), url(motivo-regular.woff);
+}
+
+@font-face {
+    font-family: Motivo Bold Extended;
+    src: url(motivo-boldextended.woff2), url(motivo-boldextended.woff);
+}
+
+@font-face {
+    font-family: Capisce Text;
+    src: url(capisce-text.woff2), url(capisce-text.woff);
+}
+
+@font-face {
+    font-family: Capisce Display;
+    src: url(capisce-display.woff2), url(capisce-display.woff);
+}
+
+@font-face {
+    font-family: Capisce Italic;
+    src: url(capisce-italic.woff2), url(capisce-italic.woff);
+}
